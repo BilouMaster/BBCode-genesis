@@ -1,0 +1,22 @@
+.gal_line {
+  margin-bottom: 5px;
+  margin-right: -10px;
+}
+.gal_line img {
+  margin-right: 5px;
+  width: auto;
+  height: 100%;
+  cursor: pointer;
+}
+.gal_line .gal_picked {
+  opacity: 0.2;
+  cursor: auto;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.gal_viewer div {
+  position: absolute;
+}
