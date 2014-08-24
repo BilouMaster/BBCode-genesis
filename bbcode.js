@@ -198,7 +198,7 @@ function galVisualize(){
 		$(this).parent().after('<div class="gal_viewer"><div /></div>');
 		$(this).clone().removeAttr('style').appendTo('.gal_viewer div');
 		$(this).addClass('gal_picked');
-	  $('.gal_viewer').height($('.gal_viewer img').height()+5).on('click', function(){
+        $('.gal_viewer').height($('.gal_viewer img').height()+5).on('click', function(){
 			$('.gal_viewer, .gal_viewer div').slideUp('normal', function(){$(this).remove()});
 			$('.gal_picked').removeClass();
 		});
