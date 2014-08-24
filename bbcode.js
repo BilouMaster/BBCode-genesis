@@ -1,5 +1,5 @@
 /*==============================================================================
-# ** EXTENSION DU BBCODE V1.0.1
+# ** EXTENSION DU BBCODE V1.0.0
 #-------------------------------------------------------------------------------
 #  Avec : 
 # Joke (genesis.biloucorp.com)
@@ -208,6 +208,5 @@ function galVisualize(){
 };
 
 $(function() {
-	applyNavigation();
 	applyBBCode();
 });
