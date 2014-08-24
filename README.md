@@ -13,12 +13,14 @@ Alors qu'une balise [img][/img] ne permet d'afficher qu'une seule image, la bali
 
 Sa syntaxe est simple :
 
-> [galery]  
-> url de la première image  
-> url de la seconde image  
-> url de la troisième image  
-> etc.  
-> [/galery]
+BBCode normal | BBCode simplifié
+------------- | -------------
+[galery]  | galery
+url de la première image  | url de la première image  
+url de la seconde image  | url de la seconde image  
+url de la troisième image  | url de la troisième image  
+etc.  | etc.  
+[/galery]  | _galery
 
 ou :
 
