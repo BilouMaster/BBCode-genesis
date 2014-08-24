@@ -7,9 +7,9 @@ Ce script est écrit à l'origine pour un forum type PunBB hébergé chez foruma
 
 ##Balise "gallery"
 
-La balise "gallery" est une alternative à l'habituelle balise "img".
+La balise "gallery" est une alternative à l'habituelle balise [img][/img] des forums.
 
-Alors qu'une balise "img" ne permet d'afficher qu'une seule image, la balise "gallery" permet d'afficher autant d'images que l'on souhaite, sous forme de miniatures.
+Alors qu'une balise [img][/img] ne permet d'afficher qu'une seule image, la balise "gallery" permet d'afficher autant d'images que l'on souhaite, sous forme de miniatures.
 
 Sa syntaxe est simple :
 
@@ -29,3 +29,6 @@ ou :
 > etc.  
 > _galery
 
+Ce qui affichera les images sous forme de galerie :
+
+![Exemple](http://i39.servimg.com/u/f39/17/07/48/59/galeri11.jpg)
