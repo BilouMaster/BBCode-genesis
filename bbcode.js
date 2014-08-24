@@ -183,17 +183,15 @@ function galVisualize(){
 			upper =  $('.gal_picked').offset().top < $(this).offset().top;
 			if (upper) {
 				scroll = $(document).height() - $(window).scrollTop();
-			} else {
-				scroll = $(this).offset().top;
-			}
-			$('.gal_picked').removeClass();
-			$('.gal_viewer').remove();
-			if (upper) {
+				$('.gal_viewer').remove();
 				scroll -= $(document).height() - $(window).scrollTop();
 			} else {
+				scroll = $(this).offset().top;
+				$('.gal_viewer').remove();
 				scroll -= $(this).offset().top;
 			}
 			$(window).scrollTop($(window).scrollTop() - scroll);
+			$('.gal_picked').removeClass();
 		}
 		$(this).parent().after('<div class="gal_viewer"><div /></div>');
 		$(this).clone().removeAttr('style').appendTo('.gal_viewer div');
