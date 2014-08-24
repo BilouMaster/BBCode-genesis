@@ -13,19 +13,19 @@ Alors qu'une balise "img" ne permet d'afficher qu'une seule image, la balise "ga
 
 Sa syntaxe est simple :
 
-[galery]
-url de la première image
-url de la seconde image
-url de la troisième image
-etc.
-[/galery]
+> [galery]  
+> url de la première image  
+> url de la seconde image  
+> url de la troisième image  
+> etc.  
+> [/galery]
 
 ou :
 
-galery_
-url de la première image
-url de la seconde image
-url de la troisième image
-etc.
-_galery
+> galery_  
+> url de la première image  
+> url de la seconde image  
+> url de la troisième image  
+> etc.  
+> _galery
 
