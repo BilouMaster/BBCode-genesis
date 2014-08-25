@@ -45,7 +45,7 @@ Il restera juste le CSS à faire :
 ```css
 span.bigsize{
   font-size: larger;
-)
+}
 ```
 
 ##Balise "+---"
