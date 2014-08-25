@@ -17,7 +17,8 @@ Les balises génériques sont des balises BBCode sans arguments, simples à cré
 Je me suis permis le luxe de proposer une syntaxe alternative :
 
 **BBCode normal**  
-> [balise]...[/balise]  
+> [balise]...[/balise]
+
 **BBCode simplifié**  
 > balise_..._balise
 
