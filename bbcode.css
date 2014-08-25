@@ -60,10 +60,10 @@ div.button{
   margin:	0 -2px;
   padding:	6px 12px;
   -webkit-transition-duration:	0.2s;
-   -moz-transition-duration:	0.2s;
-    -ms-transition-duration:	0.2s;
-     -o-transition-duration:	0.2s;
-        transition-duration:	0.2s;
+     -moz-transition-duration:	0.2s;
+      -ms-transition-duration:	0.2s;
+       -o-transition-duration:	0.2s;
+          transition-duration:	0.2s;
 }
 div.button::before{ 
   content:	"➜ ";
