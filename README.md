@@ -104,7 +104,7 @@ Sa syntaxe est simple :
 > etc.  
 > _galery
 
-Ce qui affichera les images sous forme de galerie :
+Voici un exemple de galerie ainsi générée :
 
 ![Exemple](http://i39.servimg.com/u/f39/17/07/48/59/galeri11.jpg)
 
