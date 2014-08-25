@@ -48,7 +48,7 @@ function applyBBCode() {
 			['h5',		'h5',		'title5'	],
 			['h6',		'h6',		'title6'	],
 			['gallery',	'div',		'gallery'	],
-			['button',	'div',		'posting gen-action'	],
+			['button',	'div',		'button'	],
 		]; 
 		
 		for (var a in table) {
