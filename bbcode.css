@@ -1,24 +1,119 @@
-/*** START BBCODE GALLERY ***/
+/*=================================
+# ** BEGIN BBCODE Genesis
+-----------------------------------
+# * GENERIC
+#--------------------------------*/
+div.full{
+  margin: 0 -160px;
+}
+div.caption{
+  text-align: center;
+  font-size: 11px;
+  color: #888;
+  font-style: italic;
+  margin: 10px;
+}
+h1.title1,h2.title2,h3.title3,h4.title4,h5.title5,h6.title6{
+  font-family:	'Open Sans', sans-serif;
+  color: 	#000;
+  line-height:	normal;
+  text-align:	left;
+}
+h1.title1{
+  font-size:	42px;
+  font-weight:	300;
+  text-align:	center;
+  padding:	30px 0 0 0;
+}
+h2.title2{
+  font-size:	20px;
+  font-weight:	600;
+  padding:	0 0 4px 0;
+  margin:	30px 0 10px -20px;
+  border-bottom: 1px dashed #000;
+}
+h3.title3{
+  font-size:	18px;
+  font-style:	italic;
+  font-weight:	400;
+  line-height:	18px;
+  letter-spacing: 1px;
+  margin:	30px 0 0 -10px;
+  padding-left:	24px;
+  background-image: url(http://www.biloucorp.com/BCW/Joke/lX.png);
+  Background-repeat: no-repeat;
+}
+h4.title4{
+  font-size:	14px;
+  font-weight:	700;
+}
+div.full h1.title1, div.full h2.title2, div.full h3.title3{
+  margin-left:	0;
+}
+div.button{
+  color:		#FFF;
+  background-color:	#000;
+  display:	inline-block;
+  font-family:	'Open Sans', sans-serif;
+  font-size:	16px;
+  font-weight:	400;
+  margin:	0 -2px;
+  padding:	6px 12px;
+  -webkit-transition-duration:	0.2s;
+   -moz-transition-duration:	0.2s;
+    -ms-transition-duration:	0.2s;
+     -o-transition-duration:	0.2s;
+        transition-duration:	0.2s;
+}
+div.button::before{ 
+  content: "➜ ";
+}
+div.button:hover{
+  color:		#000;
+  background-color:	#FFF;
+}
+/*---------------------------------
+# * FLOAT
+#--------------------------------*/
+.float.left, .float.full-left{
+  float:	left;
+  padding-right: 10px;
+}
+.float.right, .float.full-right{
+  float:	right;
+  padding-left:	10px;
+}
+.float.full-left{
+  margin-left:	-160px;
+}
+.float.full-right{
+  margin-right:	-160px;
+}
+/*---------------------------------
+# * GALLERY
+#--------------------------------*/
 .gal_line {
   margin-bottom: 5px;
-  margin-right: -10px;
+  margin-right:	-10px;
 }
 .gal_line img {
-  margin-right: 5px;
-  width: auto;
-  height: 100%;
-  cursor: pointer;
+  margin-right:	5px;
+  width:	auto;
+  height:	100%;
+  cursor:	pointer;
 }
 .gal_line .gal_picked {
-  opacity: 0.2;
-  cursor: auto;
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -ms-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  opacity:	0.2;
+  cursor:	auto;
+  -webkit-transition-duration:	0.5s;
+     -moz-transition-duration:	0.5s;
+      -ms-transition-duration:	0.5s;
+       -o-transition-duration:	0.5s;
+          transition-duration:	0.5s;
 }
 .gal_viewer div {
-  position: absolute;
+  position:	absolute;
 }
-/*** END BBCODE GALLERY ***/
+/*---------------------------------
+# ** END BBCODE Genesis
+#================================*/
