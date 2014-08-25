@@ -92,20 +92,20 @@ La galerie générée est pensée pour être plutôt originale et ergonomique, a
 Sa syntaxe est simple :
 
 **BBCode normal**
-> [galery]  
+> [gallery]  
 > url de la première image  
 > url de la seconde image  
 > url de la troisième image  
 > etc.  
-> [/galery]
+> [/gallery]
 
 **BBCode simplifié**
-> galery_  
+> gallery_  
 > url de la première image  
 > url de la seconde image  
 > url de la troisième image  
 > etc.  
-> _galery
+> _gallery
 
 Voici un exemple de galerie ainsi générée :
 
