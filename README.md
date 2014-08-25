@@ -116,22 +116,18 @@ Voici un exemple de galerie ainsi générée :
 #Inconvénients
 
 ###RegExp en JQuery
-Le script est 100% JQuery, mais dans la mesure du possible, il est préférable de faire toute la partie "RegExp" en PHP (et donc supprimer la fonction "applyBBCode" pour la remplacer par une méthode de votre choix.)
-
-La raison est simple :  
 Les bots (google, facebook, etc.) voient les pages sans l'execution des scripts javascript. Ils vont donc enregistrer le texte avec les balises BBCode encore visibles.
+
+Pour pallier à ce problème, il faudrait remplacer la fonction "applyBBCode" par une méthode de votre choix en PHP, mais comme le but est de proposer une solution sans PHP, il ne tient qu'à vous de considérer si c'est ou non un problème !
 
 ###Balise "gallery"
 La balise "gallery" est pensée pour accueillir n'importe quel lien d'image (des serveurs ou hébergeurs favoris des utilisateurs), tout comme le permet la balise [img][/img] qu'on connaît si bien.  
 
-Cependant, et forcément, ça ne va pas générer et stocker sur votre serveur des miniatures réduites en poids, mais afficher les images brutes avec une taille réduite par le "style" HTML.  
-Ce qui fait que si l'utilisateur décide d'afficher une tonne d'images avec, ce sera une tonne d'images chargées sur la page, et donc une petite crise pour les petits débits.
+Cependant, une solution 100% client ne permet pas de générer des miniatures allégées en poids, c'est donc les images d'origines qui sont affichées avec une taille réduite par le "style" HTML.
 
-Aussi, le type de galerie généré n'est pas vraiment adapté pour les téléphones portables, il conviendrait de coder autre chose pour une version "portable". (ayant un vieux portable pourri et non tactile, c'est une problématique qui me dépasse radicalement)
+Au premier affichage, les galeries mettent donc autant de temps à s'afficher que le temps nécessaire à charger toutes les images dans le cache, ce qui peut prendre plusieures secondes au premier affichage si l'on souhaite afficher des centaines d'images.
 
-
-
-Mais tout cela n'est pas si dramatique que ça ! <3
+Pour pallier à ce problème, une fois encore, il faudrait compléter avec du PHP afin de générer des miniatures allégées en poids. Sinon on peut considérer que ce n'est pas un problème, dans la mesure où ça n'empêche pas le reste du contenu du site de s'afficher pendant ce temps !
 
 ===
 
