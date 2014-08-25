@@ -55,8 +55,8 @@ Le code `+---` est simplement remplacé par un large espace vide.
 
 ##Balise "float"
 
-[float=arg]...[/float] ou float=arg_..._float
-Permet de faire flotter un élément à gauche ou à droite.
+[float=arg]...[/float] ou float=arg_..._float  
+Permet de faire flotter un élément à gauche ou à droite.  
 arguments : right, left, full-right, full-left.
 
 
