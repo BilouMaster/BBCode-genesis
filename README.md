@@ -30,17 +30,23 @@ Vous trouverez dans le script `bbcode.js` le tableau ci-dessous:
 			['h5',		'h5',		'title5'	],
 			['h6',		'h6',		'title6'	],
 			['gallery',	'div',		'gallery'	],
-			['button',	'div',		'posting gen-action'	],
+			['button',	'div',		'button'	],
 		]; 
 ```
 
 Il suffit de rajouter des lignes à ce tableau pour créer de nouvelles balises qui porteront le nom de la première colonne, seront remplacées par la balise HTML de la seconde colonne, et stylisables avec la classe donnée en troisième colonne.
 
-Par exemple, la ligne "`['button',	'div',		'posting gen-action'	],`"  
-va créer une balise BBCode "`[button]...[/button]`"  
-et/ou (au choix) "`button_..._button`"  
-qui sera simplement remplacée par le html "`<div class="posting gen-action">...</div>`".
+Par exemple, si on ajoute la ligne "`['big',	'span',	'bigsize'],`"  
+ça va créer une balise BBCode "`[big]...[/big]`"  
+et/ou (au choix) "`big_..._big`"  
+qui sera simplement remplacée par le html "`<span class="bigsize">...</span>`".
 
+Il restera juste le CSS à faire :
+```css
+span.bigsize{
+  font-size: larger;
+)
+```
 
 ##Balise "+---"
 
