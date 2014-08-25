@@ -5,6 +5,9 @@ Script 100% JQuery permettant d'ajouter de nouvelles balises BBCode sur n'import
 
 Ce script est écrit à l'origine pour un forum type PunBB hébergé chez forumactif.com, c'est donc une solution qui n'implique pas de PHP.
 
+Ce script est l'un des premier que j'écris, étant vraiment débutant en JS/JQuery et dans la programmation en général !  
+Je libère donc le code pour deux raisons : Partager en espérant qu'il soit utile à d'autres, et apprendre plus de vous, pour optimiser encore !  
+
 ===
 
 ##Balises génériques
@@ -13,8 +16,11 @@ Les balises génériques sont des balises BBCode sans arguments, simples à cré
 
 Je me suis permis le luxe de proposer une syntaxe alternative :
 
-> **BBCode normal** : [balise]...[/balise]  
-> **BBCode simplifié** : balise_..._balise
+**BBCode normal**  
+> [balise]...[/balise]  
+**BBCode simplifié**  
+> balise_..._balise
+
 
 ####Ajout des balises
 
@@ -100,7 +106,38 @@ Ce qui affichera les images sous forme de galerie :
 
 ===
 
-##Références
+#Inconvénients
+
+###RegExp en JQuery
+Le script est 100% JQuery, mais dans la mesure du possible, il est préférable de faire toute la partie "RegExp" en PHP (et donc supprimer la fonction "applyBBCode" pour la remplacer par une méthode de votre choix.)
+
+La raison est simple :  
+Les bots (google, facebook, etc.) voient les pages sans l'execution des scripts javascript. Ils vont donc enregistrer le texte avec les balises BBCode encore visibles.
+
+###Balise "gallery"
+La balise "gallery" est pensée pour accueillir n'importe quel lien d'image (des serveurs ou hébergeurs favoris des utilisateurs), tout comme le permet la balise [img][/img] qu'on connaît si bien.  
+
+Cependant, et forcément, ça ne va pas générer et stocker sur votre serveur des miniatures réduites en poids, mais afficher les images brutes avec une taille réduite par le "style" HTML.  
+Ce qui fait que si l'utilisateur décide d'afficher une tonne d'images avec, ce sera une tonne d'images chargées sur la page, et donc une petite crise pour les petits débits.
+
+
+
+Mais tout cela n'est pas si dramatique que ça ! <3
+
+===
+
+#Améliorations futures
+
+**Balise "gallery"**
+> * Fix à faire pour gérer les liens morts et "non-liens" (ignorer + générer une liste d'erreurs)  
+> * Ajout de flèches "précédente" et "suivante" pour une meilleure expérience de navigation des images
+> * Tentative d'optimisation du chargement des images
+
+**Balises supplémentaires ?**
+
+===
+
+#Références
 [genesis.biloucorp.com](http://genesis.biloucorp.com)  
 > [Joke's Gribs](http://genesis.biloucorp.com/t243-joke-s-gribs)  
 > [En savoir plus sur la balise "gallery"](http://genesis.biloucorp.com/t245-une-galerie-de-dessins-c-est-tout-beau)
