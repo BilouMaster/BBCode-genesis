@@ -22,6 +22,7 @@ Je me suis permis le luxe de proposer une syntaxe alternative :
 **BBCode simplifié**  
 > balise_..._balise
 
+On peut configurer le script pour avoir au choix : Les deux syntaxes, ou une seule des deux. (Par défaut, j'ai choisi la seconde)
 
 ####Ajout des balises
 
@@ -81,7 +82,9 @@ arguments : right, left, full-right, full-left.
 
 La balise "gallery" est une alternative à l'habituelle balise [img][/img] des forums.
 
-Alors qu'une balise [img][/img] ne permet d'afficher qu'une seule image, la balise "gallery" permet d'afficher autant d'images que l'on souhaite, sous forme de miniatures.
+Alors qu'une balise [img][/img] ne permet d'afficher qu'une seule image, la balise "gallery" permet d'afficher autant d'images que l'on souhaite, sous forme de galerie d'images. 
+
+La galerie générée est pensée pour être plutôt originale et ergonomique, avec une visualisation des images embarquée dans la galerie même, [je vous invite à lire cet article où j'explique mes choix en détail](http://genesis.biloucorp.com/t245-une-galerie-de-dessins-c-est-tout-beau) !
 
 Sa syntaxe est simple :
 
