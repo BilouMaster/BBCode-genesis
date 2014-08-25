@@ -187,7 +187,7 @@ Vous pourrez utiliser les nouvelles balises dans vos messages !
 Je suppose que vous savez faire :
 
 Hébergez votre bbcode.css et bbcode.js sur votre serveur.
-Reliez ensuite le script et le CSS en ajoutant ce code dans votre balise HEADER :
+Reliez ensuite le script et le CSS en ajoutant ce code dans votre balise HEAD :
 ```HTML
 <link rel="stylesheet" href="bbcode.css" type="text/css">
 <script src="bbcode.js" type="text/javascript"></script>
