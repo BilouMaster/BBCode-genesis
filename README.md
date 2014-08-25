@@ -5,6 +5,8 @@ Script 100% JQuery permettant d'ajouter de nouvelles balises BBCode sur n'import
 
 Ce script est écrit à l'origine pour un forum type PunBB hébergé chez forumactif.com, c'est donc une solution qui n'implique pas de PHP.
 
+===
+
 ##Balises génériques
 
 Les balises génériques sont des balises BBCode sans arguments, simples à créer, qui seront simplement remplacées par la balise HTML que l'on souhaite, ayant la classe que l'on souhaite.
@@ -37,8 +39,7 @@ Vous trouverez dans le script `bbcode.js` le tableau ci-dessous:
 Il suffit de rajouter des lignes à ce tableau pour créer de nouvelles balises qui porteront le nom de la première colonne, seront remplacées par la balise HTML de la seconde colonne, et stylisables avec la classe donnée en troisième colonne.
 
 Par exemple, si on ajoute la ligne "`['big',	'span',	'bigsize'],`"  
-ça va créer une balise BBCode "`[big]...[/big]`"  
-et/ou (au choix) "`big_..._big`"  
+ça va créer une balise BBCode "`[big]...[/big]`"  et/ou (au choix) "`big_..._big`"  
 qui sera simplement remplacée par le html "`<span class="bigsize">...</span>`".
 
 Il restera juste le CSS à faire :
@@ -47,6 +48,7 @@ span.bigsize{
   font-size: larger;
 }
 ```
+===
 
 ##Balise "+---"
 
@@ -58,6 +60,7 @@ Il fallait bien faire un truc inutile, et ce truc inutile est une balise pour fa
 
 Le code `+---` est simplement remplacé par un large espace vide.
 
+===
 
 ##Balise "float"
 
@@ -65,6 +68,7 @@ Le code `+---` est simplement remplacé par un large espace vide.
 Permet de faire flotter un élément à gauche ou à droite.  
 arguments : right, left, full-right, full-left.
 
+===
 
 ##Balise "gallery"
 
@@ -93,3 +97,10 @@ Sa syntaxe est simple :
 Ce qui affichera les images sous forme de galerie :
 
 ![Exemple](http://i39.servimg.com/u/f39/17/07/48/59/galeri11.jpg)
+
+===
+
+##Références
+[genesis.biloucorp.com](http://genesis.biloucorp.com)  
+> [Joke's Gribs](http://genesis.biloucorp.com/t243-joke-s-gribs)  
+> [En savoir plus sur la balise "gallery"](http://genesis.biloucorp.com/t245-une-galerie-de-dessins-c-est-tout-beau)
