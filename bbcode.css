@@ -4,14 +4,14 @@
 # * GENERIC
 #--------------------------------*/
 div.full{
-  margin: 0 -160px;
+  margin:	0 -160px;
 }
 div.caption{
-  text-align: center;
-  font-size: 11px;
-  color: #888;
-  font-style: italic;
-  margin: 10px;
+  text-align:	center;
+  font-size:	11px;
+  color:	#888;
+  font-style:	italic;
+  margin:	10px;
 }
 h1.title1,h2.title2,h3.title3,h4.title4,h5.title5,h6.title6{
   font-family:	'Open Sans', sans-serif;
@@ -47,12 +47,12 @@ h4.title4{
   font-size:	14px;
   font-weight:	700;
 }
-div.full h1.title1, div.full h2.title2, div.full h3.title3{
+.full h1.title1, .full h2.title2, .full h3.title3{
   margin-left:	0;
 }
 div.button{
-  color:		#FFF;
-  background-color:	#000;
+  color:	#FFF;
+  background-color: #000;
   display:	inline-block;
   font-family:	'Open Sans', sans-serif;
   font-size:	16px;
@@ -66,11 +66,11 @@ div.button{
         transition-duration:	0.2s;
 }
 div.button::before{ 
-  content: "➜ ";
+  content:	"➜ ";
 }
 div.button:hover{
-  color:		#000;
-  background-color:	#FFF;
+  color:	#000;
+  background-color: #FFF;
 }
 /*---------------------------------
 # * FLOAT
