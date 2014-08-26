@@ -115,7 +115,7 @@ Voici un exemple de galerie ainsi générée :
 
 #Inconvénients
 
-###RegExp en JQuery
+###RegExp en JS
 Les bots (google, facebook, etc.) voient les pages sans l'execution des scripts javascript. Ils vont donc enregistrer le texte avec les balises BBCode encore visibles.
 
 Pour pallier à ce problème, il faudrait remplacer la fonction "applyBBCode" par une méthode de votre choix en PHP, mais comme le but est de proposer une solution sans PHP, il ne tient qu'à vous de considérer si c'est ou non un problème !
