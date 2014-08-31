@@ -174,8 +174,9 @@ function galVisualize(){
 	} else if ($(this).parent().next().hasClass('gal_viewer')){
 		$('.gal_viewer, .gal_viewer div').show();
 		$('.gal_picked').removeClass();
+		$('.gal_viewer img').remove();
+		$(this).clone().removeAttr('style').appendTo('.gal_viewer div');
 		$(this).addClass('gal_picked');
-		$('.gal_viewer img').attr('src', this.src);
 		$('.gal_viewer').height($('.gal_viewer img').height()+5);
 		$('.gal_viewer div').css('margin-left', ($('.gal_viewer').width() - $('.gal_viewer img').width())/2);
 	} else {
