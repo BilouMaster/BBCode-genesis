@@ -125,7 +125,7 @@ function galGenerate() {
 	$('.gallery br').replaceWith('&nbsp;');
 	$('.gallery').each(function(i){
 		img[i] = $.trim($(this).text()).split(/\s+/);
-		$(this).empty().append('<div class="gal_line" style="height:'+H_MAX+'px"/>');
+		$(this).empty().append('<div class="gal_line" style="height:'+H_MAX+'px" />');
 		$.each(img[i], function(j,url){
 			img[i][j] = new Image();
 			img[i][j].src = url;
@@ -134,8 +134,6 @@ function galGenerate() {
 		galNextImg(i,0);
 	});
 };
-
-
 
 function galNextImg(i,j) {
 	if (j < img[i].length) {
@@ -146,7 +144,7 @@ function galNextImg(i,j) {
 			img[i][j].onload = function(){galInsertImg(i,j)};
 		}
 	}
-}
+};
 
 function galImgError(i,j) {
 	$('.gallery:eq('+i+')').after("Image non chargée : "+img[i][j].src+"<br/>");
@@ -163,11 +161,13 @@ function galInsertImg(i,j) {
 			newheight = parseInt(H_MAX * $gal.width() / (ttw[i]-5) - 1) + "px";
 			$gal.find('.gal_line:last img').height(newheight);
 			$gal.find('.gal_line:last').removeAttr('style');
-			if (j+1 < img[i].length) {$gal.append('<div class="gal_line" style="height:'+H_MAX+'px"/>')}
+			if (j+1 < img[i].length) {$gal.append('<div class="gal_line" style="height:'+H_MAX+'px" />')}
 			ttw[i] = 0;
 		}
+		galNextImg(i,j+1);
+	} else {
+		galImgError(i,j);
 	}
-	galNextImg(i,j+1);
 };
 
 function galVisualize(){
