@@ -113,24 +113,6 @@ Voici un exemple de galerie ainsi générée :
 
 ===
 
-#Inconvénients
-
-###RegExp en JS
-Les bots (google, facebook, etc.) voient les pages sans l'execution des scripts javascript. Ils vont donc enregistrer le texte avec les balises BBCode encore visibles.
-
-Pour pallier à ce problème, il faudrait remplacer la fonction "applyBBCode" par une méthode de votre choix en PHP, mais comme le but est de proposer une solution sans PHP, il ne tient qu'à vous de considérer si c'est ou non un problème !
-
-###Balise "gallery"
-La balise "gallery" est pensée pour accueillir n'importe quel lien d'image (des serveurs ou hébergeurs favoris des utilisateurs), tout comme le permet la balise [img][/img] qu'on connaît si bien.  
-
-Cependant, une solution 100% client ne permet pas de générer des miniatures allégées en poids, c'est donc les images d'origines qui sont affichées avec une taille réduite par le "style" HTML.
-
-Au premier affichage, les galeries mettent donc autant de temps à s'afficher que le temps nécessaire à charger toutes les images dans le cache, ce qui peut prendre plusieures secondes au premier affichage si l'on souhaite afficher des centaines d'images.
-
-Pour pallier à ce problème, une fois encore, il faudrait compléter avec du PHP afin de générer des miniatures allégées en poids. Sinon on peut considérer que ce n'est pas un problème, dans la mesure où ça n'empêche pas le reste du contenu du site de s'afficher pendant ce temps !
-
-===
-
 #Installation du script
 
 ###Première étape : Arranger à votre sauce
@@ -159,11 +141,7 @@ Dans le script `bbcode.js` :
 	/*========================================================================*/
 ```
 
-Les deux premières variables servent à activer/désactiver la syntaxe de votre choix.
-
-La troisième variable correspond au sélecteur JQuery qui ciblera les messages sujets à une interprétation des nouvelles balises BBCode.
-
-Le sélecteur `$('.entry-content, .blog_message')`, par exemple, correspond aux messages des forums PunBB. (toutes balises HTML ayant la classe "entry-content" ou "blog_message".)
+Le sélecteur `$('.entry-content, .blog_message')`, correspond aux messages des forums PunBB. (toutes balises HTML ayant la classe "entry-content" ou "blog_message".)
 
 Pour votre site ou forum, dans votre navigateur, il suffit de faire "clic droit > inspecter l'élément" sur un message pour connaître la classe de la div qui contient le message. Par exemple, pour phpBB, le sélecteur sera `$('.postbody')` car les messages des topics sont dans div ayant la classe "postbody".
 
@@ -197,7 +175,6 @@ Reliez ensuite le script et le CSS en ajoutant ce code dans votre balise HEAD :
 - [ ] Fix à faire pour ne pas générer à l'intérieur des balises "CODE"
 
 **Balise "gallery"**
-- [ ] Fix à faire pour gérer les liens morts et "non-liens" (ignorer + générer une liste d'erreurs)
 - [ ] Fix à faire pour générer correctement entre les balises "SPOILER"
 - [ ] Ajout de flèches "précédente" et "suivante" pour une meilleure expérience de navigation des images
 - [ ] Tentative d'optimisation du chargement des images
