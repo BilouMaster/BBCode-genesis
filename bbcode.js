@@ -121,54 +121,59 @@ function applyBBCode() {
 
 var img=[], ttw=[], H_MAX = 150;
 
-function galGenerate(){
+function galGenerate() {
 	$('.gallery br').replaceWith('&nbsp;');
 	$('.gallery').each(function(i){
 		img[i] = $.trim($(this).text()).split(/\s+/);
-		$(this).empty().append('<div class="gal_line" style="height:'+H_MAX+'px" />');
+		$(this).empty().append('<div class="gal_line" style="height:'+H_MAX+'px"/>');
 		$.each(img[i], function(j,url){
 			img[i][j] = new Image();
-			img[i][j].id = i;
-			img[i][j].name = j;
 			img[i][j].src = url;
 		});
 		ttw[i] = 0;
-		img[i][0].onload = galLoad;
+		galNextImg(i,0);
 	});
 };
 
-function galLoad(){
-	i = parseInt(this.id);
-	j = parseInt(this.name);
-	galInsertImg(i,j);
-}
 
-function galInsertImg(i,j){
-	var $gal = $('.gallery:eq('+i+')');
-	$gal.find('.gal_line:last').append(img[i][j]);
-	$(img[i][j]).on('click', galVisualize);
-	ttw[i] += $gal.find('img:last').width() + 5;
-	if (ttw[i] > $gal.width()) {
-		newheight = parseInt(H_MAX * $gal.width() / (ttw[i]-5) - 1) + "px";
-		$gal.find('.gal_line:last img').height(newheight);
-		$gal.find('.gal_line:last').removeAttr('style');
-		if (j+1 < img[i].length) {$gal.append('<div class="gal_line" style="height:'+H_MAX+'px" />')}
-		ttw[i] = 0;
-	}
-	j++;
+
+function galNextImg(i,j) {
 	if (j < img[i].length) {
 		if (img[i][j].complete) {
 			galInsertImg(i,j);
 		} else {
-			img[i][j].onload = galLoad;
+			img[i][j].onerror = function(){galImgError(i,j)};
+			img[i][j].onload = function(){galInsertImg(i,j)};
 		}
 	}
 }
 
+function galImgError(i,j) {
+	$('.gallery:eq('+i+')').after("Image non chargée : "+img[i][j].src+"<br/>");
+	galNextImg(i,j+1);
+};
+
+function galInsertImg(i,j) {
+	if (img[i][j].naturalWidth != 0) {
+		var $gal = $('.gallery:eq('+i+')');
+		$gal.find('.gal_line:last').append(img[i][j]);
+		$(img[i][j]).on('click', galVisualize);
+		ttw[i] += $gal.find('img:last').width() + 5;
+		if (ttw[i] > $gal.width()) {
+			newheight = parseInt(H_MAX * $gal.width() / (ttw[i]-5) - 1) + "px";
+			$gal.find('.gal_line:last img').height(newheight);
+			$gal.find('.gal_line:last').removeAttr('style');
+			if (j+1 < img[i].length) {$gal.append('<div class="gal_line" style="height:'+H_MAX+'px"/>')}
+			ttw[i] = 0;
+		}
+	}
+	galNextImg(i,j+1);
+};
+
 function galVisualize(){
 	var scroll, upper;
 
-	if ($(this).hasClass('gal_picked')){
+	if ($(this).hasClass('gal_picked')) {
 		$('.gal_viewer, .gal_viewer div').slideUp('normal', function(){$(this).remove()});
 		$('.gal_picked').removeClass();			
 	} else if ($(this).parent().next().hasClass('gal_viewer')){
