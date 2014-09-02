@@ -175,6 +175,7 @@ Reliez ensuite le script et le CSS en ajoutant ce code dans votre balise HEAD :
 - [ ] Fix à faire pour ne pas générer à l'intérieur des balises "CODE"
 
 **Balise "gallery"**
+- [ ] Fix à faire pour gérer les liens morts et non-liens (ignorer + générer une liste d'erreurs)
 - [ ] Fix à faire pour générer correctement entre les balises "SPOILER"
 - [ ] Ajout de flèches "précédente" et "suivante" pour une meilleure expérience de navigation des images
 - [ ] Tentative d'optimisation du chargement des images
